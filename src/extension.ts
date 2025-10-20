@@ -25,15 +25,25 @@ export function deactivate() {}
 async function openKeybindingsInRecordingMode() {
 	const keys = await vscode.window.showInputBox({
 		title: title,
-        prompt: 'Enter keyboard shortcuts(s)', 	
+        prompt: 'Enter keyboard shortcuts(s). For multiple shortcuts separate them by space. Enter empty to open keybindings editor, then use alt+k.',
 		validateInput: (keybindings) => {
-			if(keybindingsRegExp.test(keybindings)) {
+			// Allow empty input to open keybindings editor
+			if (keybindings === '') {
+				return undefined;
+			}
+			// Validate against the regular expression
+			if (keybindingsRegExp.test(keybindings)) {
 				return undefined;
 			}
 			return 'Not a valid keyboard shortcut sequence';
 		}
     });
-	if (keys) {
-		await vscode.commands.executeCommand('workbench.action.openGlobalKeybindings', `"${keys}"`);
+	
+	if (keys === '' || keys) {
+		if (keys === '') {
+			vscode.window.showInformationMessage('Use Alt+K to search by keyboard shortcuts.');
+		}
+		await vscode.commands.executeCommand('workbench.action.openGlobalKeybindings',
+			 keys === '' ? undefined : `"${keys}"`);
 	}
 }
