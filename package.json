@@ -1,8 +1,8 @@
 {
   "name": "vscode-describe-key",
-  "displayName": "Describe Key command",
+  "displayName": "Describe Key",
   "description": "Describe Key command ( like Emacs describe-key function )",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "SEE LICENSE IN LICENSE",
   "icon": "images/icon.png",
   "publisher": "sandipchitale",
