@@ -2,7 +2,7 @@
   "name": "vscode-describe-key",
   "displayName": "Describe Key",
   "description": "Describe Key command ( like Emacs describe-key function )",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "SEE LICENSE IN LICENSE",
   "icon": "images/icon.png",
   "publisher": "sandipchitale",
@@ -31,7 +31,7 @@
         "title": "Describe Key"
       }
     ],
-    " ":[
+    "keybindings":[
       {
         "command": "vscode-describe-key.describe-key",
         "key": "ctrl+x k"
