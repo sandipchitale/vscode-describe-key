@@ -44,6 +44,6 @@ async function openKeybindingsInRecordingMode() {
 			vscode.window.showInformationMessage('Use Alt+K to search by keyboard shortcuts.');
 		}
 		await vscode.commands.executeCommand('workbench.action.openGlobalKeybindings',
-			 keys === '' ? undefined : `"${keys}"`);
+			 keys === '' ? undefined : `@keybinding:"${keys}"`);
 	}
 }

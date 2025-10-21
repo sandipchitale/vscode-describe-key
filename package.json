@@ -2,7 +2,7 @@
   "name": "vscode-describe-key",
   "displayName": "Describe Key",
   "description": "Describe Key command ( like Emacs describe-key function )",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "SEE LICENSE IN LICENSE",
   "icon": "images/icon.png",
   "publisher": "sandipchitale",
